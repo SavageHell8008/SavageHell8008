@@ -1,88 +1,87 @@
-<h1 align="center">👤 Facial Reconstruction Model Using GANs</h1>
+# 👤 Facial Reconstruction Model Using GANs
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Machine%20Learning-GAN-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Python-3.8%2B-FFD700?style=for-the-badge" />
-  <img src="https://img.shields.io/github/license/yourusername/yourproject?style=for-the-badge" />
-  <img src="https://img.shields.io/github/stars/yourusername/yourproject?style=social" />
-</p>
+![GANs](https://img.shields.io/badge/Machine%20Learning-GAN-blue)
+![Python](https://img.shields.io/badge/Python-3.8%2B-brightgreen)
+![License](https://img.shields.io/github/license/yourusername/yourproject)
+![Stars](https://img.shields.io/github/stars/yourusername/yourproject?style=social)
 
 ---
 
-<p align="center">
-    <img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" width="500" height="auto" alt="AI Vibe"/>
-</p>
+## 📋 Project Overview
+This project implements a **Facial Reconstruction Model** using **Generative Adversarial Networks (GANs)** to enhance low-quality facial images. The model tackles challenges like **motion blur**, **occlusions**, and **lighting variations** to provide high-quality reconstructions.
+
+<div align="center">
+    <img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" alt="Facial Reconstruction" width="400"/>
+</div>
 
 ---
 
-## ⚡ **Project Overview**
-Welcome to the **Facial Reconstruction Model** powered by **Generative Adversarial Networks (GANs)**. The project aims to reconstruct high-quality facial images by overcoming challenges such as **motion blur**, **occlusions**, and **lighting variations**. Step into the future of **AI-enhanced image restoration**!
+<details open>
+<summary>🔍 <b>Model Architecture</b> </summary>
 
-<details>
-<summary>🚀 <b>Model Architecture (Click to Expand)</b></summary>
+### Machine Learning Techniques
+- **Generator**: U-Net-like architecture with skip connections for better gradient flow during training.
+- **Discriminator**: Batch and instance normalization with gradient penalty for stable training.
 
-### 🧠 **Core Machine Learning Techniques**
-- **Generator**: U-Net-like architecture with advanced **skip connections** for smoother gradient flow.
-- **Discriminator**: Leverages **Batch Normalization**, **Instance Normalization**, and **Gradient Penalty** for more stable and efficient training.
+### Image Enhancement Techniques
+- **Deblurring**: Integrating **DeBlurGAN-v2** for real-time motion blur reduction.
+- **Upscaling**: Using **ESRGAN (Enhanced Super-Resolution GAN)** to refine facial details for high-resolution output.
 
-### 🔧 **Image Enhancement Techniques**
-- **Deblurring**: Integrated **DeBlurGAN-v2** to reduce motion blur in real-time scenarios.
-- **Upscaling**: High-resolution facial detail enhancement via **ESRGAN** (Enhanced Super-Resolution GAN).
-
-### ⚙️ **Real-Time Processing & Optimization**
-Despite hardware constraints:
-- **Batch size**: 16
-- **Training time**: ~4 hours per epoch on a **16GB RAM, Ryzen 5 CPU** setup.
+### Real-Time Processing
+Despite hardware limitations, the model has been optimized for efficiency:
+- 🖥️ **Hardware**: 16GB RAM, Ryzen 5 CPU.
+- ⏳ **Training**: Takes approximately **4 hours per epoch** for a batch size of 16.
 
 </details>
 
 ---
 
 <details>
-<summary>⚙️ <b>Challenges and Solutions (Click to Expand)</b></summary>
+<summary>⚙️ <b>Challenges and Approach</b></summary>
 
-### 🔄 **Motion Blur**
-We counter motion blur using **DeBlurGAN** and plan to upgrade to **DeBlurGAN-v2** for better fast-motion handling.
+### Motion Blur
+We tackle motion blur by leveraging **DeBlurGAN** and **DeBlurGAN-v2** for handling fast motion in video frames.
 
-### 🦾 **Occlusions**
-Skip connections in the generator help recover finer details from non-occluded regions.
+### Occlusions
+Using **skip connections** in the generator to recover finer details from non-occluded regions.
 
-### 🌟 **Lighting Variations**
-Training across multiple lighting conditions using **Instance Normalization** ensures robustness and adaptability.
+### Lighting Variations
+GANs are trained across various lighting setups using **instance normalization** to ensure robustness across diverse conditions.
 
 </details>
 
 ---
 
 <details>
-<summary>🔮 <b>Future Enhancements (Click to Expand)</b></summary>
+<summary>📈 <b>Future Enhancements Plan</b> </summary>
 
-- **Facial Recognition and 3D Reconstruction**: Future versions will include facial recognition and 3D facial reconstruction techniques for better accuracy.
-- **Performance Optimization**: Training for 100 epochs will enhance the facial detail reconstruction and reduce artifacts.
-
-#### 🚧 **Hardware Constraints**
-Current training is limited by hardware (16GB RAM, Ryzen 5 CPU), resulting in slower training (4 hours per epoch). More epochs will be required to achieve optimal results.
+- **Facial Recognition** and **3D Reconstruction**: In future iterations, we aim to integrate 3D reconstruction techniques for more versatile outputs.
+- **Performance Optimization**: Training will continue through 100 epochs to improve results, particularly in facial detail reconstruction.
+  
+#### 🚧 Hardware Constraints:
+Due to **16GB RAM** and a **Ryzen 5 CPU**, training time is around **4 hours per epoch**. However, we anticipate significant improvements with more epochs.
 
 </details>
 
 ---
 
-## 🧬 **Technologies Used**
+## 🛠️ **Technologies Used**
+
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge" alt="Python" />
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white&style=for-the-badge" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?logo=tensorflow&logoColor=white&style=for-the-badge" alt="TensorFlow" />
-  <img src="https://img.shields.io/badge/GANs-blueviolet?style=for-the-badge" alt="GANs" />
-  <img src="https://img.shields.io/badge/AI-Vision-FF69B4?style=for-the-badge" alt="AI Vision" />
+  <img src="https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white&style=for-the-badge" alt="Python" />
+  <img src="https://img.shields.io/badge/-PyTorch-EE4C2C?logo=pytorch&logoColor=white&style=for-the-badge" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/-TensorFlow-FF6F00?logo=tensorflow&logoColor=white&style=for-the-badge" alt="TensorFlow" />
+  <img src="https://img.shields.io/badge/-GANs-blueviolet?style=for-the-badge" alt="GANs" />
 </p>
 
-- 🧠 **Generative Adversarial Networks (GANs)** for image generation.
-- 🖼️ **DeBlurGAN-v2** for real-time deblurring.
-- 🔍 **ESRGAN** for high-resolution upscaling.
+- 🧠 **Generative Adversarial Networks (GANs)**
+- 🖼️ **DeBlurGAN-v2** for motion blur reduction
+- 🔍 **ESRGAN** for high-resolution upscaling
+- 💻 **Python**, **PyTorch**, **TensorFlow**
 
 ---
 
-## 💻 **How to Run the Project**
+## 🚀 **How to Run the Project**
 
 ```bash
 # Clone the repository
